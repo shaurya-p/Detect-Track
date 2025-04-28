@@ -7,3 +7,4 @@ __pycache__/
 
 # Ignore cloned external libraries (optional if you prefer)
 external/
+weights/
