@@ -5,6 +5,7 @@
 __pycache__/
 *.pyc
 
-# Ignore cloned external libraries (optional if you prefer)
-external/
+# Ignore folders
+data/
 weights/
+outputs/
