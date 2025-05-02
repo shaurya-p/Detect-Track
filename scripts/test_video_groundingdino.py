@@ -27,9 +27,9 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Parameters
 NUM_SAMPLES = 5
-BOX_THRESHOLD = 0.25
-TEXT_THRESHOLD = 0.10
-CAPTION = "car, person, bike, truck"
+BOX_THRESHOLD = 0.35
+TEXT_THRESHOLD = 0.25
+CAPTION = "car, top view of a car, person, bike, truck"
 
 # Load Model
 print("Loading GroundingDINO...")

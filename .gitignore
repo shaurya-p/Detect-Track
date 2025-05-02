@@ -5,6 +5,10 @@
 __pycache__/
 *.pyc
 
+# Models
+yolo11m-obb.pt
+yolo11n-obb.pt
+
 # Ignore folders
 data/
 weights/
