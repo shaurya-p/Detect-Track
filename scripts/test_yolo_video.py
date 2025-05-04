@@ -6,9 +6,11 @@ import numpy as np
 import cv2
 import random
 from ultralytics import YOLO
+import supervision as sv
 
 # Paths
-VIDEO_PATH = "/home/shaurya/Detect-Track/data/videos/bg_vid.mp4"
+# VIDEO_PATH = "/home/shaurya/Detect-Track/data/videos/bg_vid.mp4"
+VIDEO_PATH = '/home/shaurya/Downloads/vid3.mp4'
 MODEL_PATH = "yolo11m-obb.pt"
 
 NUM_SAMPLES = 5
@@ -40,10 +42,10 @@ while cap.isOpened() and sample_idx < NUM_SAMPLES:
 
     if current_idx == frame_indices[sample_idx]:
         #Processing
-        frame = cv2.resize(frame, (1024, 1024)) 
 
         print(f"Running YOLO on frame {current_idx}...")
         results = model(frame)[0]
+        print(f"Results for frame {current_idx}: {results}")
 
         # Annotate
         annotated_frame = results.plot()
@@ -53,7 +55,8 @@ while cap.isOpened() and sample_idx < NUM_SAMPLES:
 
         sample_idx += 1
 
-    current_idx +=1 
+    current_idx += 1 
+
 
 cap.release()
 print("✅ YOLO frame sampling test completed.")
